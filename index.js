@@ -20,7 +20,7 @@ const client = new MongoClient(
   }
 );
 
-const PORT = 3100;
+const PORT = process.env.PORT || 3100;
 
 app.get("/one", async (req, res) => {
   await client.connect();
